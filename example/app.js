@@ -129,7 +129,8 @@ export default class App extends Component {
   pickMultiple() {
     ImagePicker.openPicker({
       multiple: true,
-      waitAnimationEnd: false
+      waitAnimationEnd: false,
+      chooserTitle: "选择打开方式"
     }).then(images => {
       this.setState({
         image: null,
