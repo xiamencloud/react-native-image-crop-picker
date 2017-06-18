@@ -128,9 +128,11 @@ export default class App extends Component {
 
   pickMultiple() {
     ImagePicker.openPicker({
+      mediaType: "photo",
       multiple: true,
       waitAnimationEnd: false,
-      chooserTitle: "选择打开方式"
+      chooserTitle: "选择打开方式",
+      maxFiles: 9
     }).then(images => {
       this.setState({
         image: null,
